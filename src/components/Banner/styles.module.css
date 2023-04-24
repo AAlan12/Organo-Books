@@ -1,0 +1,43 @@
+.container_banner {
+    background: var(--color-first);
+    color: var(--color-zero);
+    height: 450px;
+}
+
+.container_logo {
+    display: flex;
+    align-items: center;
+    align-content: start;
+    padding: 10px;
+    margin-left: 100px;
+   
+}
+
+.container_logo img {
+    width: 80px;
+    padding: 10px;
+}
+
+.container_logo h2 {
+    font-size: 22px;
+}
+
+.container_box {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.container_subtitle h3 {
+    font-weight: 700;
+    font-size: 30px;
+    padding: 10px;
+}
+.container_subtitle p {
+    padding: 10px;
+    font-size: 20px;
+}
+
+.container_box img {
+    width: 35%;
+}
