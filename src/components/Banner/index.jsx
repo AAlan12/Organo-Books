@@ -6,6 +6,7 @@ function Banner() {
   return (
     <div>
         <img src={ImgBanner} alt="Livros" />
+        <p>Organo Books</p>
     </div>
   );
 }
