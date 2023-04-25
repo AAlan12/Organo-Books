@@ -2,8 +2,9 @@ import styles from './styles.module.css';
 import Input from '../Input';
 import Lists from '../Lists';
 import Buttons from '../Buttons';
+import { useState } from 'react';
 
-function Form() {
+function Form({ registerLivro }) {
 
     const categories = [
         "HQ's e Mangás",
@@ -25,22 +26,65 @@ function Form() {
         "Psicologia",
     ]
 
+    const [nome, setNome] = useState('')
+    const [nomeAutor, setNomeAutor] = useState('')
+    const [quantidadePgs, setQuantidadePgs] = useState('')
+    const [img, setImg] = useState('')
+    const [categoria, setCategoria] = useState('')
+
     const onSave = (event) => {
         event.preventDefault()
-        console.log('Form foi submetido')
+        registerLivro({
+            nome,
+            nomeAutor,
+            quantidadePgs,
+            img,
+            categoria
+        })
     }
 
     return (
-        <section className={styles.container_form}>
-            <form onSubmit={onSave}>
-                <h2>Preencha os dados para criar o card da obra</h2>
-                <Input mandatory={true} label="Nome" type="text" placeholder="Digite o nome da obra" />
-                <Input mandatory={true} label="Nome do Autor" type="text" placeholder="Digite o nome do autor" />
-                <Input mandatory={true} label="Quantidade de Páginas" type="number" placeholder="Digite a quantidade de páginas" />
-                <Lists mandatory={true} label="Categorias" itens={categories}/>
-                <Buttons txt="Criar Card" />
-            </form>
-        </section>
+        <>
+            <section className={styles.container_form}>
+                <form onSubmit={onSave}>
+                    <h2>Preencha os dados para criar o card da obra</h2>
+                    <Input  mandatory={true} 
+                            label="Nome" 
+                            type="text"
+                            placeholder="Digite o nome da obra"
+                            val={nome}
+                            onChanged={val => setNome(val)} 
+                    />
+                    <Input  mandatory={true} 
+                            label="Nome do Autor" 
+                            type="text" 
+                            placeholder="Digite o nome do autor" 
+                            val={nomeAutor}
+                            onChanged={val => setNomeAutor(val)}
+                    />
+                    <Input  mandatory={true} 
+                            label="Quantidade de Páginas" 
+                            type="number" 
+                            placeholder="Digite a quantidade de páginas"
+                            val={quantidadePgs}
+                            onChanged={val => setQuantidadePgs(val)} 
+                    />
+                    <Input  label="Imagem" 
+                            type="image" 
+                            placeholder="Digite o endereço da imagem"
+                            val={img}
+                            onChanged={val => setImg(val)} 
+                    />
+                    <Lists  mandatory={true} 
+                            label="Categorias" 
+                            itens={categories} 
+                            val={categoria}
+                            onChanged={val => setCategoria(val)}
+                    />
+                    <Buttons txt="Criar Card" />
+                </form>
+            </section>
+        </>
     );
 }
 
