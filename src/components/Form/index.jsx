@@ -25,15 +25,19 @@ function Form() {
         "Psicologia",
     ]
 
+    const onSave = (event) => {
+        event.preventDefault()
+        console.log('Form foi submetido')
+    }
 
     return (
         <section className={styles.container_form}>
-            <form>
+            <form onSubmit={onSave}>
                 <h2>Preencha os dados para criar o card da obra</h2>
-                <Input label="Nome" type="text" placeholder="Digite o nome da obra" />
-                <Input label="Nome do Autor" type="text" placeholder="Digite o nome do autor" />
-                <Input label="Quantidade de Páginas" type="number" placeholder="Digite a quantidade de páginas" />
-                <Lists label="Categorias" itens={categories}/>
+                <Input mandatory={true} label="Nome" type="text" placeholder="Digite o nome da obra" />
+                <Input mandatory={true} label="Nome do Autor" type="text" placeholder="Digite o nome do autor" />
+                <Input mandatory={true} label="Quantidade de Páginas" type="number" placeholder="Digite a quantidade de páginas" />
+                <Lists mandatory={true} label="Categorias" itens={categories}/>
                 <Buttons txt="Criar Card" />
             </form>
         </section>
