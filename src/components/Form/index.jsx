@@ -1,6 +1,7 @@
 import styles from './styles.module.css';
 import Input from '../Input';
 import Lists from '../Lists';
+import Buttons from '../Buttons';
 
 function Form() {
 
@@ -33,6 +34,7 @@ function Form() {
                 <Input label="Nome do Autor" type="text" placeholder="Digite o nome do autor" />
                 <Input label="Quantidade de Páginas" type="number" placeholder="Digite a quantidade de páginas" />
                 <Lists label="Categorias" itens={categories}/>
+                <Buttons txt="Criar Card" />
             </form>
         </section>
     );

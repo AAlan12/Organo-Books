@@ -1,0 +1,15 @@
+.section_buttons {
+    background-color: var(--color-sixth);
+    border-radius: 10px;
+    font-weight: 700;
+    font-size: 18px;
+    padding: 32px;
+    border: none;
+    cursor: pointer;
+    color: var(--color-zero);
+    margin: 32px 0;
+}
+
+.section_buttons:hover {
+    color: var(--color-zero);
+}
