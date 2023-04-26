@@ -1,5 +1,5 @@
 .container_banner {
-    background: var(--color-first);
+    background: var(--color-dark);
     color: var(--color-zero);
     height: 450px;
 }

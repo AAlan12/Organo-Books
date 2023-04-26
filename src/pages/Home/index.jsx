@@ -6,6 +6,94 @@ import Category from '../../components/Category';
 
 function Home() {
 
+    const categories = [
+        {
+            nome: "HQ's e Mangás" ,
+            corPrimaria: '',
+            corSecundaria: ''
+        },
+        {
+            nome: "Literatura Infantojuvenil" ,
+            corPrimaria: '',
+            corSecundaria: ''
+        },
+        {
+            nome: "Literatura Estrangeira" ,
+            corPrimaria: '',
+            corSecundaria: ''
+        },
+        {
+            nome: "Literatura Brasileira" ,
+            corPrimaria: '',
+            corSecundaria: ''
+        },
+        {
+            nome: "Informática" ,
+            corPrimaria: '',
+            corSecundaria: ''
+        },
+        {
+            nome: "Geografia e História" ,
+            corPrimaria: '',
+            corSecundaria: ''
+        },
+        {
+            nome: "Administração e Negócios" ,
+            corPrimaria: '',
+            corSecundaria: ''
+        },
+        {
+            nome: "Direito" ,
+            corPrimaria: '',
+            corSecundaria: ''
+        },
+        {
+            nome: "Ciências Biológicas e Medicina" ,
+            corPrimaria: '',
+            corSecundaria: ''
+        },
+        {
+            nome: "Ciências Exatas, Engenharia e tecnologia" ,
+            corPrimaria: '',
+            corSecundaria: ''
+        },
+        {
+            nome: "Religião e Espiritualidade" ,
+            corPrimaria: '',
+            corSecundaria: ''
+        },
+        {
+            nome: "Artes" ,
+            corPrimaria: '',
+            corSecundaria: ''
+        },
+        {
+            nome: "Gastronomia" ,
+            corPrimaria: '',
+            corSecundaria: ''
+        },
+        {
+            nome: "Autoajuda" ,
+            corPrimaria: '',
+            corSecundaria: ''
+        },
+        {
+            nome: "Artes" ,
+            corPrimaria: '',
+            corSecundaria: ''
+        },
+        {
+            nome: "Esportes e Lazer e Turismo" ,
+            corPrimaria: '',
+            corSecundaria: ''
+        },
+        {
+            nome: "Psicologia" ,
+            corPrimaria: '',
+            corSecundaria: ''
+        },
+    ]
+
     const [livros, setLivros] =useState([])
 
     const addLivro = (livro) => {
@@ -17,9 +105,7 @@ function Home() {
         <>
             <Banner />
             <Form registerLivro={livro => addLivro(livro)} />
-            <Category nome="HQ's e Mangás" />
-            <Category nome="Literatura Infantojuvenil" />
-            <Category nome="Literatura Estrangeira" />
+            {categories.map(category => <Category key={category.nome} nome={category.nome} />)}
         </>
     );
 }
