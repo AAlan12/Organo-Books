@@ -18,7 +18,6 @@ function Form({ registerLivro }) {
         "Ciências Biológicas e Medicina",
         "Ciências Exatas, Engenharia e tecnologia",
         "Religião e Espiritualidade",
-        "Artes",
         "Gastronomia",
         "Autoajuda",
         "Artes",

@@ -1,7 +1,7 @@
 .container_banner {
-    background: var(--color-dark);
+    background: var(--color-second);
     color: var(--color-zero);
-    height: 450px;
+    height: 420px;
 }
 
 .container_logo {
@@ -39,5 +39,5 @@
 }
 
 .container_box img {
-    width: 35%;
+    width: 30%;
 }

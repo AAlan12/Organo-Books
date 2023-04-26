@@ -9,88 +9,83 @@ function Home() {
     const categories = [
         {
             nome: "HQ's e Mangás" ,
-            corPrimaria: '',
-            corSecundaria: ''
+            corPrimaria: '#6278f7',
+            corSecundaria: '#7387f8'
         },
         {
             nome: "Literatura Infantojuvenil" ,
-            corPrimaria: '',
-            corSecundaria: ''
+            corPrimaria: '#F9ED69',
+            corSecundaria: '#f7ec7a'
         },
         {
             nome: "Literatura Estrangeira" ,
-            corPrimaria: '',
-            corSecundaria: ''
+            corPrimaria: '#F08A5D',
+            corSecundaria: '#ef926b'
         },
         {
             nome: "Literatura Brasileira" ,
-            corPrimaria: '',
-            corSecundaria: ''
+            corPrimaria: '#B83B5E',
+            corSecundaria: '#ba4667'
         },
         {
             nome: "Informática" ,
-            corPrimaria: '',
-            corSecundaria: ''
+            corPrimaria: '#6A2C70',
+            corSecundaria: '#6b3370'
         },
         {
             nome: "Geografia e História" ,
-            corPrimaria: '',
-            corSecundaria: ''
+            corPrimaria: '#AD8B73',
+            corSecundaria: '#af9480'
         },
         {
             nome: "Administração e Negócios" ,
-            corPrimaria: '',
-            corSecundaria: ''
+            corPrimaria: '#CEAB93',
+            corSecundaria: '#cdb3a1'
         },
         {
             nome: "Direito" ,
-            corPrimaria: '',
-            corSecundaria: ''
+            corPrimaria: '#E3CAA5',
+            corSecundaria: '#e4d2b5'
         },
         {
             nome: "Ciências Biológicas e Medicina" ,
-            corPrimaria: '',
-            corSecundaria: ''
+            corPrimaria: '#CCA8E9',
+            corSecundaria: '#d7beeb'
         },
         {
             nome: "Ciências Exatas, Engenharia e tecnologia" ,
-            corPrimaria: '',
-            corSecundaria: ''
+            corPrimaria: '#30E3CA',
+            corSecundaria: '#40e6cf'
         },
         {
             nome: "Religião e Espiritualidade" ,
-            corPrimaria: '',
-            corSecundaria: ''
+            corPrimaria: '#11999E',
+            corSecundaria: '#1d999d'
         },
         {
             nome: "Artes" ,
-            corPrimaria: '',
-            corSecundaria: ''
+            corPrimaria: '#40514E',
+            corSecundaria: '#475351'
         },
         {
             nome: "Gastronomia" ,
-            corPrimaria: '',
-            corSecundaria: ''
+            corPrimaria: '#F67280',
+            corSecundaria: '#f68590'
         },
         {
             nome: "Autoajuda" ,
-            corPrimaria: '',
-            corSecundaria: ''
-        },
-        {
-            nome: "Artes" ,
-            corPrimaria: '',
-            corSecundaria: ''
+            corPrimaria: '#C06C84',
+            corSecundaria: '#c1778c'
         },
         {
             nome: "Esportes e Lazer e Turismo" ,
-            corPrimaria: '',
-            corSecundaria: ''
+            corPrimaria: '#6C5B7B',
+            corSecundaria: '#71647d'
         },
         {
             nome: "Psicologia" ,
-            corPrimaria: '',
-            corSecundaria: ''
+            corPrimaria: '#D864A9',
+            corSecundaria: '#d877b1'
         },
     ]
 
@@ -105,7 +100,11 @@ function Home() {
         <>
             <Banner />
             <Form registerLivro={livro => addLivro(livro)} />
-            {categories.map(category => <Category key={category.nome} nome={category.nome} />)}
+            {categories.map(category =>
+                 <Category  key={category.nome} 
+                            nome={category.nome} 
+                            corPrimaria={category.corPrimaria} 
+                            corSecundaria={category.corSecundaria} />)}
         </>
     );
 }
