@@ -2,6 +2,7 @@ import styles from './styles.module.css';
 import Banner from '../../components/Banner';
 import Form from '../../components/Form';
 import { useState } from 'react';
+import Category from '../../components/Category';
 
 function Home() {
 
@@ -16,6 +17,9 @@ function Home() {
         <>
             <Banner />
             <Form registerLivro={livro => addLivro(livro)} />
+            <Category nome="HQ's e Mangás" />
+            <Category nome="Literatura Infantojuvenil" />
+            <Category nome="Literatura Estrangeira" />
         </>
     );
 }
