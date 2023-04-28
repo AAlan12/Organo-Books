@@ -4,26 +4,7 @@ import Lists from '../Lists';
 import Buttons from '../Buttons';
 import { useState } from 'react';
 
-function Form({ registerLivro }) {
-
-    const categories = [
-        "HQ's e Mangás",
-        "Literatura Infantojuvenil",
-        "Literatura Estrangeira",
-        "Literatura Brasileira",
-        "Informática",
-        "Geografia e História",
-        "Administração e Negócios",
-        "Direito",
-        "Ciências Biológicas e Medicina",
-        "Ciências Exatas, Engenharia e tecnologia",
-        "Religião e Espiritualidade",
-        "Gastronomia",
-        "Autoajuda",
-        "Artes",
-        "Esportes e Lazer e Turismo",
-        "Psicologia",
-    ]
+function Form({ registerLivro, categoriasNome }) {
 
     const [nome, setNome] = useState('')
     const [nomeAutor, setNomeAutor] = useState('')
@@ -76,7 +57,7 @@ function Form({ registerLivro }) {
                     />
                     <Lists  mandatory={true} 
                             label="Categorias" 
-                            itens={categories} 
+                            itens={categoriasNome} 
                             val={categoria}
                             onChanged={val => setCategoria(val)}
                     />
