@@ -1,0 +1,36 @@
+.container_book {
+    width: 280px;
+}
+
+.container_book .header {
+    background-color:  var(--color-seventh);
+    border-radius: 10px 10px 0px 0px;
+}
+.container_book img {
+    width: 180px;
+    position: relative;
+    bottom: -50px;
+}
+
+.container_book .footer {
+    background: var(--color-zero);
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.08);
+    border-radius: 0px 0px 10px 10px;
+    padding-top: 90px;
+    padding-bottom: 40px;
+}
+
+.container_book .footer h4 {
+    color: var(--color-third);
+    font-size: 18px;
+    line-height: 22px;
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+.container_book .footer h5 {
+    font-size: 18px;
+    line-height: 22px;
+    color: var(--color-eighth);
+    padding: 0 16px;
+}

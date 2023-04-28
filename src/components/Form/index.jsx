@@ -4,7 +4,7 @@ import Lists from '../Lists';
 import Buttons from '../Buttons';
 import { useState } from 'react';
 
-function Form({ registerLivro, categoriasNome }) {
+function Form({ registerLivro, categoriesName }) {
 
     const [nome, setNome] = useState('')
     const [nomeAutor, setNomeAutor] = useState('')
@@ -57,7 +57,7 @@ function Form({ registerLivro, categoriasNome }) {
                     />
                     <Lists  mandatory={true} 
                             label="Categorias" 
-                            itens={categoriasNome} 
+                            itens={categoriesName} 
                             val={categoria}
                             onChanged={val => setCategoria(val)}
                     />

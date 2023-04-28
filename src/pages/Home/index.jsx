@@ -99,7 +99,7 @@ function Home() {
     return (
         <>
             <Banner />
-            <Form categoriasNome= {categories.map(category => category.nome)} registerLivro={livro => addLivro(livro)} />
+            <Form categoriesName= {categories.map(category => category.nome)} registerLivro={livro => addLivro(livro)} />
             {categories.map(category =>
                  <Category  key={category.nome} 
                             nome={category.nome} 

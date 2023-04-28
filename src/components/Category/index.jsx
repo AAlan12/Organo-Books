@@ -1,3 +1,4 @@
+import Book from '../Book';
 import styles from './styles.module.css';
 
 function Category({ nome, corPrimaria, corSecundaria }) {
@@ -10,6 +11,7 @@ function Category({ nome, corPrimaria, corSecundaria }) {
                 <h3 style={{ borderColor: corPrimaria }}>
                     {nome}
                 </h3>
+                <Book />
             </section>
         </>
     );
