@@ -104,7 +104,8 @@ function Home() {
                  <Category  key={category.nome} 
                             nome={category.nome} 
                             corPrimaria={category.corPrimaria} 
-                            corSecundaria={category.corSecundaria} />)}
+                            corSecundaria={category.corSecundaria}
+                            books={livros} />)}
         </>
     );
 }

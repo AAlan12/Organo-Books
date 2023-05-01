@@ -50,7 +50,7 @@ function Form({ registerLivro, categoriesName }) {
                             onChanged={val => setQuantidadePgs(val)} 
                     />
                     <Input  label="Imagem" 
-                            type="image" 
+                            type="url" 
                             placeholder="Digite o endereço da imagem"
                             val={img}
                             onChanged={val => setImg(val)} 

@@ -1,15 +1,16 @@
 import styles from './styles.module.css';
 import Img from '../../assets/img/chaisaw.jpg'
 
-function Book() {
+function  Book({ name, authorName, category, img }) {
     return (
         <div className={styles.container_book}>
             <div className={styles.header}>
-                <img src={Img} alt="" />
+                <img src={img} alt={name} />
             </div>
             <div className={styles.footer}>
-                <h4>Chainsaw Man 2</h4>
-                <h5>HQ's e Mangás</h5>
+                <h4>{name}</h4>
+                <h5>{authorName}</h5>
+                <h5>{category}</h5>
             </div>
         </div>
     );

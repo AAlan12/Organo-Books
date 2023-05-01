@@ -1,7 +1,7 @@
 import Book from '../Book';
 import styles from './styles.module.css';
 
-function Category({ nome, corPrimaria, corSecundaria }) {
+function Category({ nome, corPrimaria, corSecundaria, books }) {
     
     const ccs = { backgroundColor: corSecundaria }
 
@@ -11,7 +11,7 @@ function Category({ nome, corPrimaria, corSecundaria }) {
                 <h3 style={{ borderColor: corPrimaria }}>
                     {nome}
                 </h3>
-                <Book />
+                {books.map( book => <Book name={book.nome} authorName={book.nomeAutor} category={book.categoria} img={book.img} />)}
             </section>
         </>
     );
