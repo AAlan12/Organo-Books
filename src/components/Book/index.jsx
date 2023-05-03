@@ -10,7 +10,6 @@ function  Book({ name, authorName, category, img }) {
             <div className={styles.footer}>
                 <h4>{name}</h4>
                 <h5>{authorName}</h5>
-                <h5>{category}</h5>
             </div>
         </div>
     );
