@@ -8,104 +8,104 @@ function Home() {
 
     const categories = [
         {
-            nome: "HQ's e Mangás" ,
-            corPrimaria: '#6278f7',
-            corSecundaria: '#7387f8'
+            d: "HQ's e Mangás" ,
+            primaryColor: '#6278f7',
+            secondaryColor: '#7387f8'
         },
         {
-            nome: "Literatura Infantojuvenil" ,
-            corPrimaria: '#F9ED69',
-            corSecundaria: '#f7ec7a'
+            d: "Literatura Infantojuvenil" ,
+            primaryColor: '#F9ED69',
+            secondaryColor: '#f7ec7a'
         },
         {
-            nome: "Literatura Estrangeira" ,
-            corPrimaria: '#F08A5D',
-            corSecundaria: '#ef926b'
+            d: "Literatura Estrangeira" ,
+            primaryColor: '#F08A5D',
+            secondaryColor: '#ef926b'
         },
         {
-            nome: "Literatura Brasileira" ,
-            corPrimaria: '#B83B5E',
-            corSecundaria: '#ba4667'
+            name: "Literatura Brasileira" ,
+            primaryColor: '#B83B5E',
+            secondaryColor: '#ba4667'
         },
         {
-            nome: "Informática" ,
-            corPrimaria: '#6A2C70',
-            corSecundaria: '#6b3370'
+            name: "Informática" ,
+            primaryColor: '#6A2C70',
+            secondaryColor: '#6b3370'
         },
         {
-            nome: "Geografia e História" ,
-            corPrimaria: '#AD8B73',
-            corSecundaria: '#af9480'
+            name: "Geografia e História" ,
+            primaryColor: '#AD8B73',
+            secondaryColor: '#af9480'
         },
         {
-            nome: "Administração e Negócios" ,
-            corPrimaria: '#CEAB93',
-            corSecundaria: '#cdb3a1'
+            name: "Administração e Negócios" ,
+            primaryColor: '#CEAB93',
+            secondaryColor: '#cdb3a1'
         },
         {
-            nome: "Direito" ,
-            corPrimaria: '#E3CAA5',
-            corSecundaria: '#e4d2b5'
+            name: "Direito" ,
+            primaryColor: '#E3CAA5',
+            secondaryColor: '#e4d2b5'
         },
         {
-            nome: "Ciências Biológicas e Medicina" ,
-            corPrimaria: '#CCA8E9',
-            corSecundaria: '#d7beeb'
+            name: "Ciências Biológicas e Medicina" ,
+            primaryColor: '#CCA8E9',
+            secondaryColor: '#d7beeb'
         },
         {
-            nome: "Ciências Exatas, Engenharia e tecnologia" ,
-            corPrimaria: '#30E3CA',
-            corSecundaria: '#40e6cf'
+            name: "Ciências Exatas, Engenharia e tecnologia" ,
+            primaryColor: '#30E3CA',
+            secondaryColor: '#40e6cf'
         },
         {
-            nome: "Religião e Espiritualidade" ,
-            corPrimaria: '#11999E',
-            corSecundaria: '#1d999d'
+            name: "Religião e Espiritualidade" ,
+            primaryColor: '#11999E',
+            secondaryColor: '#1d999d'
         },
         {
-            nome: "Artes" ,
-            corPrimaria: '#40514E',
-            corSecundaria: '#475351'
+            name: "Artes" ,
+            primaryColor: '#40514E',
+            secondaryColor: '#475351'
         },
         {
-            nome: "Gastronomia" ,
-            corPrimaria: '#F67280',
-            corSecundaria: '#f68590'
+            name: "Gastronomia" ,
+            primaryColor: '#F67280',
+            secondaryColor: '#f68590'
         },
         {
-            nome: "Autoajuda" ,
-            corPrimaria: '#C06C84',
-            corSecundaria: '#c1778c'
+            name: "Autoajuda" ,
+            primaryColor: '#C06C84',
+            secondaryColor: '#c1778c'
         },
         {
-            nome: "Esportes e Lazer e Turismo" ,
-            corPrimaria: '#6C5B7B',
-            corSecundaria: '#71647d'
+            name: "Esportes e Lazer e Turismo" ,
+            primaryColor: '#6C5B7B',
+            secondaryColor: '#71647d'
         },
         {
-            nome: "Psicologia" ,
-            corPrimaria: '#D864A9',
-            corSecundaria: '#d877b1'
+            name: "Psicologia" ,
+            primaryColor: '#D864A9',
+            secondaryColor: '#d877b1'
         },
     ]
 
-    const [livros, setLivros] =useState([])
+    const [books, setBooks] =useState([])
 
-    const addLivro = (livro) => {
-        console.log(livro)
-        setLivros([...livros, livro])
+    const addBook = (book) => {
+        console.log(book)
+        setBooks([...books, book])
     }
 
     return (
         <>
             <Banner />
-            <Form categoriesName= {categories.map(category => category.nome)} registerLivro={livro => addLivro(livro)} />
+            <Form categoriesName= {categories.map(category => category.name)} registerBooks={book => addBook(book)} />
             {categories.map(category =>
-                 <Category  key={category.nome} 
-                            nome={category.nome} 
-                            corPrimaria={category.corPrimaria} 
-                            corSecundaria={category.corSecundaria}
-                            books={livros} />)}
+                 <Category  key={category.name} 
+                            name={category.name} 
+                            primaryColor={category.primaryColor} 
+                            secondaryColor={category.secondaryColor}
+                            books={books} />)}
         </>
     );
 }

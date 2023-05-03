@@ -1,20 +1,20 @@
 import Book from '../Book';
 import styles from './styles.module.css';
 
-function Category({ nome, corPrimaria, corSecundaria, books }) {
+function Category({ name, primaryColor, secondaryColor, books }) {
 
-    const ccs = { backgroundColor: corSecundaria }
+    const ccs = { backgroundColor: secondaryColor }
 
     return (
         <>
-            <section className={styles.container_category} style={{ backgroundColor: corSecundaria }}>
-                <h3 style={{ borderColor: corPrimaria }}>
-                    {nome}
+            <section className={styles.container_category} style={{ backgroundColor: secondaryColor }}>
+                <h3 style={{ borderColor: primaryColor }}>
+                    {name}
                 </h3>
                 <div className={styles.container_books}>
                     {books.map(book => 
-                        <Book name={book.nome}
-                            authorName={book.nomeAutor}
+                        <Book name={book.name}
+                            authorName={book.authorName}
                             img={book.img}
                     />)}
                 </div>

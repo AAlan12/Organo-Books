@@ -4,22 +4,22 @@ import Lists from '../Lists';
 import Buttons from '../Buttons';
 import { useState } from 'react';
 
-function Form({ registerLivro, categoriesName }) {
+function Form({ registerBooks, categoriesName }) {
 
-    const [nome, setNome] = useState('')
-    const [nomeAutor, setNomeAutor] = useState('')
-    const [quantidadePgs, setQuantidadePgs] = useState('')
+    const [name, setName] = useState('')
+    const [authorName, setAuthorName] = useState('')
+    const [numberPgs, setNumberPgs] = useState('')
     const [img, setImg] = useState('')
-    const [categoria, setCategoria] = useState('')
+    const [category, setCategory] = useState('')
 
     const onSave = (event) => {
         event.preventDefault()
-        registerLivro({
-            nome,
-            nomeAutor,
-            quantidadePgs,
+        registerBooks({
+            name,
+            authorName,
+            numberPgs,
             img,
-            categoria
+            category
         })
     }
 
@@ -32,22 +32,22 @@ function Form({ registerLivro, categoriesName }) {
                             label="Nome" 
                             type="text"
                             placeholder="Digite o nome da obra"
-                            val={nome}
-                            onChanged={val => setNome(val)} 
+                            val={name}
+                            onChanged={val => setName(val)} 
                     />
                     <Input  mandatory={true} 
                             label="Nome do Autor" 
                             type="text" 
                             placeholder="Digite o nome do autor" 
-                            val={nomeAutor}
-                            onChanged={val => setNomeAutor(val)}
+                            val={authorName}
+                            onChanged={val => setAuthorName(val)}
                     />
                     <Input  mandatory={true} 
                             label="Quantidade de Páginas" 
                             type="number" 
                             placeholder="Digite a quantidade de páginas"
-                            val={quantidadePgs}
-                            onChanged={val => setQuantidadePgs(val)} 
+                            val={numberPgs}
+                            onChanged={val => setNumberPgs(val)} 
                     />
                     <Input  label="Imagem" 
                             type="url" 
@@ -58,8 +58,8 @@ function Form({ registerLivro, categoriesName }) {
                     <Lists  mandatory={true} 
                             label="Categorias" 
                             itens={categoriesName} 
-                            val={categoria}
-                            onChanged={val => setCategoria(val)}
+                            val={category}
+                            onChanged={val => setCategory(val)}
                     />
                     <Buttons txt="Criar Card" />
                 </form>

@@ -1,7 +1,6 @@
 import styles from './styles.module.css';
-import Img from '../../assets/img/chaisaw.jpg'
 
-function  Book({ name, authorName, category, img }) {
+function  Book({ name, authorName, img }) {
     return (
         <div className={styles.container_book}>
             <div className={styles.header}>
