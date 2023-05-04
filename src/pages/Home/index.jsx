@@ -10,81 +10,81 @@ function Home() {
         {
             name: "HQ's e Mangás" ,
             primaryColor: '#6278f7',
-            secondaryColor: '#7387f8'
+            secondaryColor: '#c2cafb'
         },
         {
             name: "Literatura Infantojuvenil" ,
-            primaryColor: '#F9ED69',
-            secondaryColor: '#f7ec7a'
+            primaryColor: '#f9e93e',
+            secondaryColor: '#f5eea6'
         },
         {
             name: "Literatura Estrangeira" ,
             primaryColor: '#F08A5D',
-            secondaryColor: '#ef926b'
+            secondaryColor: '#eeae93'
         },
         {
             name: "Literatura Brasileira" ,
             primaryColor: '#B83B5E',
-            secondaryColor: '#ba4667'
+            secondaryColor: '#caa7b1'
         },
         {
             name: "Informática" ,
             primaryColor: '#6A2C70',
-            secondaryColor: '#6b3370'
+            secondaryColor: '#bda8c0'
         },
         {
             name: "Geografia e História" ,
-            primaryColor: '#AD8B73',
-            secondaryColor: '#af9480'
+            primaryColor: '#af7d59',
+            secondaryColor: '#b09e8f'
         },
         {
             name: "Administração e Negócios" ,
-            primaryColor: '#CEAB93',
+            primaryColor: '#d08d61',
             secondaryColor: '#cdb3a1'
         },
         {
             name: "Direito" ,
-            primaryColor: '#E3CAA5',
+            primaryColor: '#e1ad5e',
             secondaryColor: '#e4d2b5'
         },
         {
             name: "Ciências Biológicas e Medicina" ,
-            primaryColor: '#CCA8E9',
+            primaryColor: '#bd88e8',
             secondaryColor: '#d7beeb'
         },
         {
             name: "Ciências Exatas, Engenharia e tecnologia" ,
-            primaryColor: '#30E3CA',
-            secondaryColor: '#40e6cf'
+            primaryColor: '#13bda6',
+            secondaryColor: '#81e6d8'
         },
         {
             name: "Religião e Espiritualidade" ,
-            primaryColor: '#11999E',
-            secondaryColor: '#1d999d'
+            primaryColor: '#0c787b',
+            secondaryColor: '#98cfd1'
         },
         {
             name: "Artes" ,
             primaryColor: '#40514E',
-            secondaryColor: '#475351'
+            secondaryColor: '#94b0ac'
         },
         {
             name: "Gastronomia" ,
-            primaryColor: '#F67280',
+            primaryColor: '#f7374a',
             secondaryColor: '#f68590'
         },
         {
             name: "Autoajuda" ,
             primaryColor: '#C06C84',
-            secondaryColor: '#c1778c'
+            secondaryColor: '#be909d'
         },
         {
             name: "Esportes e Lazer e Turismo" ,
             primaryColor: '#6C5B7B',
-            secondaryColor: '#71647d'
+            secondaryColor: '#a093ab'
         },
         {
             name: "Psicologia" ,
-            primaryColor: '#D864A9',
+            primaryColor: '#ab3e80',
             secondaryColor: '#d877b1'
         },
     ]
