@@ -8,17 +8,17 @@ function Home() {
 
     const categories = [
         {
-            d: "HQ's e Mangás" ,
+            name: "HQ's e Mangás" ,
             primaryColor: '#6278f7',
             secondaryColor: '#7387f8'
         },
         {
-            d: "Literatura Infantojuvenil" ,
+            name: "Literatura Infantojuvenil" ,
             primaryColor: '#F9ED69',
             secondaryColor: '#f7ec7a'
         },
         {
-            d: "Literatura Estrangeira" ,
+            name: "Literatura Estrangeira" ,
             primaryColor: '#F08A5D',
             secondaryColor: '#ef926b'
         },
@@ -99,7 +99,7 @@ function Home() {
     return (
         <>
             <Banner />
-            <Form categoriesName= {categories.map(category => category.name)} registerBooks={book => addBook(book)} />
+            <Form categoriesName= {categories.map(category => category.name)} registerBook={book => addBook(book)} />
             {categories.map(category =>
                  <Category  key={category.name} 
                             name={category.name} 

@@ -4,7 +4,7 @@ import Lists from '../Lists';
 import Buttons from '../Buttons';
 import { useState } from 'react';
 
-function Form({ registerBooks, categoriesName }) {
+function Form({ registerBook, categoriesName }) {
 
     const [name, setName] = useState('')
     const [authorName, setAuthorName] = useState('')
@@ -14,7 +14,7 @@ function Form({ registerBooks, categoriesName }) {
 
     const onSave = (event) => {
         event.preventDefault()
-        registerBooks({
+        registerBook({
             name,
             authorName,
             numberPgs,
