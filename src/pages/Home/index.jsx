@@ -100,12 +100,13 @@ function Home() {
         <>
             <Banner />
             <Form categoriesName= {categories.map(category => category.name)} registerBook={book => addBook(book)} />
+
             {categories.map(category =>
                  <Category  key={category.name} 
                             name={category.name} 
                             primaryColor={category.primaryColor} 
                             secondaryColor={category.secondaryColor}
-                            books={books} />)}
+                            books={books.filter(book => book.category === category.name)} />)}
         </>
     );
 }
