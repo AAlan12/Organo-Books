@@ -92,7 +92,6 @@ function Home() {
     const [books, setBooks] =useState([])
 
     const addBook = (book) => {
-        console.log(book)
         setBooks([...books, book])
     }
 

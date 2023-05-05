@@ -13,7 +13,9 @@ function Category({ name, primaryColor, secondaryColor, books }) {
                 </h3>
                 <div className={styles.container_books}>
                     {books.map(book => 
-                        <Book name={book.name}
+                        <Book
+                            key={book.name} 
+                            name={book.name}
                             authorName={book.authorName}
                             img={book.img}
                     />)}
