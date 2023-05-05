@@ -16,6 +16,7 @@ function Category({ name, primaryColor, secondaryColor, books }) {
                         <Book
                             key={book.name} 
                             name={book.name}
+                            categoryColor={primaryColor}
                             authorName={book.authorName}
                             img={book.img}
                     />)}
