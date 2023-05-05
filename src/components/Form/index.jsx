@@ -21,6 +21,11 @@ function Form({ registerBook, categoriesName }) {
             img,
             category
         })
+        setName('')
+        setAuthorName('')
+        setNumberPgs('')
+        setImg('')
+        setCategory('')
     }
 
     return (
