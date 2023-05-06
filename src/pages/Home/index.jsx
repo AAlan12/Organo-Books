@@ -44,18 +44,18 @@ function Home() {
         },
         {
             name: "Direito" ,
-            primaryColor: '#e1ad5e',
-            secondaryColor: '#e4d2b5'
+            primaryColor: '#f7374a',
+            secondaryColor: '#f68590'
         },
         {
             name: "Ciências Biológicas e Medicina" ,
-            primaryColor: '#bd88e8',
-            secondaryColor: '#d7beeb'
+            primaryColor: '#13bda6',
+            secondaryColor: '#81e6d8'
         },
         {
             name: "Ciências Exatas, Engenharia e tecnologia" ,
-            primaryColor: '#13bda6',
-            secondaryColor: '#81e6d8'
+            primaryColor: '#40514E',
+            secondaryColor: '#94b0ac'
         },
         {
             name: "Religião e Espiritualidade" ,
@@ -64,13 +64,13 @@ function Home() {
         },
         {
             name: "Artes" ,
-            primaryColor: '#40514E',
-            secondaryColor: '#94b0ac'
+            primaryColor: '#bd88e8',
+            secondaryColor: '#d7beeb'
         },
         {
             name: "Gastronomia" ,
-            primaryColor: '#f7374a',
-            secondaryColor: '#f68590'
+            primaryColor: '#e1ad5e',
+            secondaryColor: '#e4d2b5'
         },
         {
             name: "Autoajuda" ,
