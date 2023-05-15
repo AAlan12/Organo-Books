@@ -1,0 +1,25 @@
+.footer_container {
+    background: var(--color-dark);
+    color: var(--color-zero);
+    padding: 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer_container ul li {
+    display: inline-block;
+    margin-right: 32px;
+}
+
+.footer_container ul li:last-child {
+    margin-right: 0;
+}
+
+.footer_container img {
+    width: 80px;
+}
+
+.footer_container a {
+    color: var(--color-second);
+}

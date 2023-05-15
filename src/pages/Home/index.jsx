@@ -3,6 +3,7 @@ import Banner from '../../components/Banner';
 import Form from '../../components/Form';
 import { useState } from 'react';
 import Category from '../../components/Category';
+import Footer from '../../components/Footer';
 
 function Home() {
 
@@ -161,8 +162,7 @@ function Home() {
                         books={books.filter(book => book.category === category.name)} />
                 )}
             </section>
-
-
+            <Footer/>
         </>
     );
 }
