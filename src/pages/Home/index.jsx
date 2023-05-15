@@ -89,7 +89,58 @@ function Home() {
         },
     ]
 
-    const [books, setBooks] =useState([])
+    const init = [
+        {
+            name:'Chainsaw Man #2',
+            author:'Tatsuki Fujimoto',
+            img:'https://github.com/AAlan12/Organo-Books/blob/main/src/assets/img/chaisaw.jpg?raw=true',
+            category: categories[0].name
+        },
+        {
+            name:'Solo Leveling #3',
+            author:'Chugong e DUBU',
+            img:'https://github.com/AAlan12/Organo-Books/blob/main/src/assets/img/solo.jpg?raw=true',
+            category: categories[0].name
+        },
+        {
+            name:'Juju Kaisen #0',
+            author:'Gege Akutami',
+            img:'https://github.com/AAlan12/Organo-Books/blob/main/src/assets/img/juju.jpg?raw=true',
+            category: categories[0].name
+        },
+        {
+            name:'The Witcher: O Último Desejo',
+            author:'Andrzej Sapkowski',
+            img:'https://github.com/AAlan12/Organo-Books/blob/main/src/assets/img/witcher.jpg?raw=true',
+            category: categories[2].name
+        },
+        {
+            name:'Prince of Thorns',
+            author:'Mark Lawrence',
+            img:'https://github.com/AAlan12/Organo-Books/blob/main/src/assets/img/prince.jpg?raw=true',
+            category: categories[2].name
+        },
+        {
+            name:'Eldest',
+            author:'Christopher Paolini',
+            img:'https://github.com/AAlan12/Organo-Books/blob/main/src/assets/img/eldest.jpg?raw=true',
+            category: categories[2].name
+        },
+        {
+            name:'Battle Royale',
+            author:'Koushun Takami',
+            img:'https://github.com/AAlan12/Organo-Books/blob/main/src/assets/img/battle.jpg?raw=true',
+            category: categories[2].name
+        },
+        {
+            name:'Level UP',
+            author:'Scott Rogers',
+            img:'https://github.com/AAlan12/Organo-Books/blob/main/src/assets/img/level.jpg?raw=true',
+            category: categories[4].name
+        },
+    ]
+
+    const [books, setBooks] =useState(init)
 
     const addBook = (book) => {
         setBooks([...books, book])
@@ -99,6 +150,10 @@ function Home() {
         <>
             <Banner />
             <Form categoriesName= {categories.map(category => category.name)} registerBook={book => addBook(book)} />
+
+            <section className={styles.categories}>
+                <h1>Categorias</h1>
+            </section>
 
             {categories.map(category =>
                  <Category  key={category.name} 
