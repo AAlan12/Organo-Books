@@ -1,3 +1,15 @@
 body {
     background: var(--color-dark);
 }
+
+.categories {
+    text-align: center;
+}
+
+.categories h1 {
+    font-size: 40px;
+    font-weight: 700;
+    color: var(--color-zero);
+    display: inline-block;
+    margin: 32px 0;
+}
