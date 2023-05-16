@@ -1,8 +1,10 @@
 import styles from './styles.module.css';
+import { AiFillCloseCircle } from 'react-icons/ai';
 
-function  Book({ name, authorName, img, categoryColor }) {
+function  Book({ name, authorName, img, categoryColor, onDelete }) {
     return (
         <div className={styles.container_book} >
+            <AiFillCloseCircle size={25} className={styles.delete} onClick={onDelete} />
             <div className={styles.header} style={{ backgroundColor: categoryColor }}>
                 <img src={img} alt={name} />
             </div>

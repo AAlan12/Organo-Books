@@ -147,6 +147,10 @@ function Home() {
         setBooks([...books, book])
     }
 
+    const deleteBook = () => {
+        console.log('Deletando livro');
+    }
+
     return (
         <>
             <Banner />
@@ -159,7 +163,9 @@ function Home() {
                         name={category.name}
                         primaryColor={category.primaryColor}
                         secondaryColor={category.secondaryColor}
-                        books={books.filter(book => book.category === category.name)} />
+                        books={books.filter(book => book.category === category.name)} 
+                        onDelete={deleteBook}
+                        />
                 )}
             </section>
             <Footer/>
