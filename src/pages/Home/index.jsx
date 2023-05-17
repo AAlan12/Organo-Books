@@ -164,6 +164,20 @@ function Home() {
             img: 'https://github.com/AAlan12/Organo-Books/blob/main/src/assets/img/level.jpg?raw=true',
             category: categories[4].name
         },
+        {
+            id: uuidv4(),
+            name: 'Contos De Fadas Para Garotas Corajosas',
+            author: 'Anita Ganeri',
+            img: 'https://github.com/AAlan12/Organo-Books/blob/main/src/assets/img/contos.jpg?raw=true',
+            category: categories[1].name
+        },
+        {
+            id: uuidv4(),
+            name: 'Atlas de Anatomia Humana 7ed',
+            author: 'Frank H. Frank H. Netter',
+            img: 'https://github.com/AAlan12/Organo-Books/blob/main/src/assets/img/atlas.jpg?raw=true',
+            category: categories[8].name
+        },
     ]
 
     const [books, setBooks] = useState(init)
