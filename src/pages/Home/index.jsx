@@ -172,8 +172,8 @@ function Home() {
         setBooks([...books, book])
     }
 
-    const deleteBook = () => {
-        console.log('Deletando livro');
+    const deleteBook = (id) => {
+        setBooks(books.filter(book => book.id !== id));
     }
 
     return (

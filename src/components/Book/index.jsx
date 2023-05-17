@@ -4,7 +4,10 @@ import { AiFillCloseCircle } from 'react-icons/ai';
 function  Book({ book, categoryColor, onDelete }) {
     return (
         <div className={styles.container_book} >
-            <AiFillCloseCircle size={25} className={styles.delete} onClick={onDelete} />
+            <AiFillCloseCircle 
+                size={25} 
+                className={styles.delete} 
+                onClick={() => onDelete(book.id)} />
             <div className={styles.header} style={{ backgroundColor: categoryColor }}>
                 <img src={book.img} alt={book.name} />
             </div>
