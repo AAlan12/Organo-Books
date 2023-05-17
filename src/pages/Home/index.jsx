@@ -8,7 +8,7 @@ import { v4 as uuidv4 } from 'uuid';
 
 function Home() {
 
-    const categories = [
+    const [categories, setCategories] = useState([
         {
             id: uuidv4(),
             name: "HQ's e Mangás",
@@ -105,7 +105,7 @@ function Home() {
             primaryColor: '#ab3e80',
             secondaryColor: '#d877b1'
         },
-    ]
+    ])
 
     const init = [
         {
@@ -179,15 +179,13 @@ function Home() {
     return (
         <>
             <Banner />
-            <Form categoriesName={categories.map(category => category.name)} registerBook={book => addBook(book)} />
+            <Form categories={categories.map(category => category.name)} registerBook={book => addBook(book)} />
 
             <section className={styles.categories}>
                 <h1>Categorias</h1>
-                {categories.map(category =>
-                    <Category key={category.name}
-                        name={category.name}
-                        primaryColor={category.primaryColor}
-                        secondaryColor={category.secondaryColor}
+                {categories.map((category, index) =>
+                    <Category key={index}
+                        category={category}
                         books={books.filter(book => book.category === category.name)} 
                         onDelete={deleteBook}
                         />

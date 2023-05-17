@@ -1,24 +1,22 @@
 import Book from '../Book';
 import styles from './styles.module.css';
 
-function Category({ name, primaryColor, secondaryColor, books, onDelete }) {
+function Category({ category, books, onDelete }) {
 
-    const ccs = { backgroundColor: secondaryColor }
+    const ccs = { backgroundColor: category.secondaryColor }
 
     return (
         <>
-            <section className={styles.container_category} style={{ backgroundColor: secondaryColor }}>
-                <h3 style={{ borderColor: primaryColor }}>
-                    {name}
+            <section className={styles.container_category} style={{ backgroundColor: category.secondaryColor }}>
+                <h3 style={{ borderColor: category.primaryColor }}>
+                    {category.name}
                 </h3>
                 <div className={styles.container_books}>
-                    {books.map(book => {
+                    {books.map((book, index) => {
                         return <Book
-                            key={book.name}
-                            name={book.name}
-                            categoryColor={primaryColor}
-                            authorName={book.authorName}
-                            img={book.img}
+                            key={index}
+                            book={book}
+                            categoryColor={category.primaryColor}
                             onDelete={onDelete}
                         />
                     })}
