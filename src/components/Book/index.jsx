@@ -1,7 +1,17 @@
 import styles from './styles.module.css';
-import { AiFillCloseCircle } from 'react-icons/ai';
+import { AiFillCloseCircle, AiFillHeart, AiOutlineHeart } from 'react-icons/ai';
 
-function  Book({ book, categoryColor, onDelete }) {
+function  Book({ book, categoryColor, onDelete, onFav }) {
+
+     const favAction = () => {
+        onFav(book.id);
+     }
+
+     const propsFav = {
+        size: 25,
+        onClick: favAction
+     }
+
     return (
         <div className={styles.container_book} >
             <AiFillCloseCircle 
@@ -16,6 +26,11 @@ function  Book({ book, categoryColor, onDelete }) {
                     {book.name}
                 </h4>
                 <h5>{book.authorName}</h5>
+                <div className={styles.fav}>
+                    {book.fav 
+                        ? <AiFillHeart {...propsFav} color='#CF0A0A' /> 
+                        : <AiOutlineHeart {...propsFav} />}
+                </div>
             </div>
         </div>
     );

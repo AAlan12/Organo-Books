@@ -18,7 +18,7 @@ function Home() {
         {
             id: uuidv4(),
             name: "Literatura Infantojuvenil",
-            primaryColor: '#f9e93e',
+            primaryColor: '#a1950e',
             secondaryColor: '#f5eea6'
         },
         {
@@ -110,6 +110,7 @@ function Home() {
     const init = [
         {
             id: uuidv4(),
+            fav: false,
             name: 'Chainsaw Man #2',
             author: 'Tatsuki Fujimoto',
             img: 'https://github.com/AAlan12/Organo-Books/blob/main/src/assets/img/chaisaw.jpg?raw=true',
@@ -117,6 +118,7 @@ function Home() {
         },
         {
             id: uuidv4(),
+            fav: false,
             name: 'Solo Leveling #3',
             author: 'Chugong e DUBU',
             img: 'https://github.com/AAlan12/Organo-Books/blob/main/src/assets/img/solo.jpg?raw=true',
@@ -124,6 +126,7 @@ function Home() {
         },
         {
             id: uuidv4(),
+            fav: false,
             name: 'Juju Kaisen #0',
             author: 'Gege Akutami',
             img: 'https://github.com/AAlan12/Organo-Books/blob/main/src/assets/img/juju.jpg?raw=true',
@@ -131,6 +134,7 @@ function Home() {
         },
         {
             id: uuidv4(),
+            fav: false,
             name: 'The Witcher: O Último Desejo',
             author: 'Andrzej Sapkowski',
             img: 'https://github.com/AAlan12/Organo-Books/blob/main/src/assets/img/witcher.jpg?raw=true',
@@ -138,6 +142,7 @@ function Home() {
         },
         {
             id: uuidv4(),
+            fav: false,
             name: 'Prince of Thorns',
             author: 'Mark Lawrence',
             img: 'https://github.com/AAlan12/Organo-Books/blob/main/src/assets/img/prince.jpg?raw=true',
@@ -145,6 +150,7 @@ function Home() {
         },
         {
             id: uuidv4(),
+            fav: false,
             name: 'Eldest',
             author: 'Christopher Paolini',
             img: 'https://github.com/AAlan12/Organo-Books/blob/main/src/assets/img/eldest.jpg?raw=true',
@@ -152,6 +158,7 @@ function Home() {
         },
         {
             id: uuidv4(),
+            fav: false,
             name: 'Battle Royale',
             author: 'Koushun Takami',
             img: 'https://github.com/AAlan12/Organo-Books/blob/main/src/assets/img/battle.jpg?raw=true',
@@ -159,6 +166,7 @@ function Home() {
         },
         {
             id: uuidv4(),
+            fav: false,
             name: 'Level UP',
             author: 'Scott Rogers',
             img: 'https://github.com/AAlan12/Organo-Books/blob/main/src/assets/img/level.jpg?raw=true',
@@ -166,6 +174,7 @@ function Home() {
         },
         {
             id: uuidv4(),
+            fav: false,
             name: 'Contos De Fadas Para Garotas Corajosas',
             author: 'Anita Ganeri',
             img: 'https://github.com/AAlan12/Organo-Books/blob/main/src/assets/img/contos.jpg?raw=true',
@@ -173,6 +182,7 @@ function Home() {
         },
         {
             id: uuidv4(),
+            fav: false,
             name: 'Atlas de Anatomia Humana 7ed',
             author: 'Frank H. Frank H. Netter',
             img: 'https://github.com/AAlan12/Organo-Books/blob/main/src/assets/img/atlas.jpg?raw=true',
@@ -190,6 +200,13 @@ function Home() {
         setBooks(books.filter(book => book.id !== id));
     }
 
+    const favButton = (id) => {
+        setBooks(books.map(book => {
+            if(book.id === id) book.fav = !book.fav;
+            return book
+        }))
+    }
+
     return (
         <>
             <Banner />
@@ -202,6 +219,7 @@ function Home() {
                         category={category}
                         books={books.filter(book => book.category === category.name)} 
                         onDelete={deleteBook}
+                        onFav={favButton}
                         />
                 )}
             </section>

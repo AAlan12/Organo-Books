@@ -1,7 +1,7 @@
 import Book from '../Book';
 import styles from './styles.module.css';
 
-function Category({ category, books, onDelete }) {
+function Category({ category, books, onDelete, onFav }) {
 
     const ccs = { backgroundColor: category.secondaryColor }
 
@@ -18,6 +18,7 @@ function Category({ category, books, onDelete }) {
                             book={book}
                             categoryColor={category.primaryColor}
                             onDelete={onDelete}
+                            onFav={onFav}
                         />
                     })}
                 </div>
